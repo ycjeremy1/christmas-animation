@@ -146,10 +146,15 @@ body {
   animation: sparkle 2s infinite;
   z-index: 4;
 
-  /* 🔥 关键：整体下移 */
   position: relative;
   top: 20vh;
 }
+/* 🔥 只控制 SVG 手写字的位置（不影响其他任何东西） */
+.wish-svg {
+  position: relative;
+  top: 22vh;   /* iPhone 下移高度，只改这个数 */
+}
+
 
 
 @keyframes sparkle {
@@ -205,4 +210,11 @@ canvas {
   to {
     stroke-dashoffset: 0;
   }
+}
+/* ✅ 强制让 SVG 手写字下移（不改其它任何代码） */
+svg.wish-svg{
+  position: relative !important;
+  top: 22vh !important;
+  left: 0 !important;
+  transform: none !important;
 }
