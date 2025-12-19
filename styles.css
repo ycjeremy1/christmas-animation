@@ -145,7 +145,12 @@ body {
     0 0 20px #ff6666;
   animation: sparkle 2s infinite;
   z-index: 4;
+
+  /* 🔥 关键：整体下移 */
+  position: relative;
+  top: 20vh;
 }
+
 
 @keyframes sparkle {
   0%, 100% {
