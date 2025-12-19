@@ -3,14 +3,18 @@
 ===================== */
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background:
     url("3.jpg") no-repeat center bottom,
     #000;
-  background-size: 878px 1185px;
+
+  /* iPhone 15 专用比例 */
+  background-size: 100vw calc(100vw * 852 / 393);
+
   overflow: hidden;
   font-family: Arial, sans-serif;
 }
+
 
 /* =====================
    主容器
