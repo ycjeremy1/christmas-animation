@@ -155,7 +155,12 @@ body {
   top: 22vh;   /* iPhone 下移高度，只改这个数 */
 }
 
-
+/* iPhone 专用（关键） */
+@media (hover: none) and (pointer: coarse) {
+  .wish-svg {
+    top: 260px;   /* 👈 手机上用 px 才稳定 */
+  }
+}
 
 @keyframes sparkle {
   0%, 100% {
